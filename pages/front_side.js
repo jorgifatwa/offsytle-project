@@ -29,7 +29,7 @@ export default function Home() {
             <div className="flex justify-between items-center mb-4">
                 {/* Menu bar dengan judul */}
                 <div className="flex items-center">
-                    <Link href="/">
+                    <Link href="/template">
                         <div className="mr-4 flex items-center">
                             <ArrowBackOutlinedIcon className="w-6 h-6 text-white" />
                             <span className="ml-2">Go Back</span>

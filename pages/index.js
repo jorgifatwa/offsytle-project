@@ -60,7 +60,7 @@ export default function Home() {
               <img
                 src={image}
                 alt="Product"
-                className="max-h-80 max-w-80 w-full h-full object-cover rounded-xl"
+                className="max-h-80 max-w-full w-full h-full object-cover rounded-xl"
                 style={{ objectFit: 'cover' }} // Apply object-fit: cover here
               />
               <div className="px-4 py-3 w-auto">

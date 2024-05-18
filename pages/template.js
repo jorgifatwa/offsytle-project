@@ -47,22 +47,19 @@ export default function Home() {
                 </div>
                 
                 <div className="w-full h-full mx-auto p-4 py-4 grid md:grid-cols-2 gap-6">
-                    {menuItem1.map(({ title, image, link }, index) => {
-                        return (
-                        <Link href={link}>
-                            <div key={index} className="rounded-xl relative">
-                                <div className="w-auto bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                                    <div className="absolute bg-black/50 rounded-xl text-white">
-                                        <p className="font-bold text-2xl px-2 pt-2">{title} </p>
+                    {menuItem1.map(({ title, image, link }, index) => (
+                        <Link href={link} key={index}>
+                            <div className="relative">
+                                <div className="w-full h-full bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl relative overflow-hidden">
+                                    <img src={image} alt="Product" className="w-full h-full object-cover rounded-xl" />
+                                    <div className="absolute top-0 left-0 bg-black/50 rounded-tl-xl text-white">
+                                        <p className="font-bold text-2xl px-2 pt-2">{title}</p>
                                     </div>
-                                    <img src={image}
-                                    alt="Product" className="max-h-80 w-full h-full object-cover rounded-xl" /> 
                                 </div>
                             </div>
                         </Link>
-                        );
-                    })}
-                </div>        
+                    ))}
+                </div>
             </div>
 
             <div className="container items-center mx-auto py-4">
