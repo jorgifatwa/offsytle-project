@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import LayoutDetail from "../components/LayoutDetail";
 import Link from "next/link";
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
@@ -7,12 +7,19 @@ import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternate
 import InterestsOutlinedIcon from '@mui/icons-material/InterestsOutlined';
 import AddHomeOutlinedIcon from '@mui/icons-material/AddHomeOutlined';
 export default function Home() {
+    const [showColorPalette, setShowColorPalette] = useState(false); // State untuk mengontrol apakah palet warna ditampilkan atau tidak
+
+    const toggleColorPalette = () => {
+        setShowColorPalette(!showColorPalette); // Fungsi untuk menampilkan atau menyembunyikan palet warna
+    };
     const menuItem = [
         {
           title: "T-Shirt",
           image: '/assets/OFF-STYLE/2.png',
         },
       ];
+    
+    const backgroundColors = ["red", "green", "blue", "yellow", "purple", "orange"]; // Daftar warna latar belakang
   return (
      <div>
         <LayoutDetail>
@@ -29,12 +36,10 @@ export default function Home() {
                         </div>
                     </Link>
                     {/* Tambahkan menu bar lainnya di sini jika diperlukan */}
-                    <Link href="/cart">
-                        <div className="mr-4 flex items-center">
-                            <FormatColorFillOutlinedIcon className="w-6 h-6" />
-                            <span className="ml-2">Background Color</span>
-                        </div>
-                    </Link>
+                    <div className="mr-4 flex items-center" onClick={toggleColorPalette}>
+                        <FormatColorFillOutlinedIcon className="w-6 h-6" />
+                        <span className="ml-2">Background Color</span>
+                    </div>
                     <Link href="/profile">
                         <div className="mr-4 flex items-center">
                             <AddPhotoAlternateOutlinedIcon className="w-6 h-6" />
@@ -80,6 +85,26 @@ export default function Home() {
                     View Result
                 </a>
             </div>
+
+            {showColorPalette && (
+                <div className="fixed -top-20 -left-20 w-full h-full bg-black/50 flex justify-center items-center">
+                    <div className="bg-white p-4 rounded-xl">
+                        {/* Isi dengan komponen palet warna yang diinginkan */}
+                        <p className='text-text-light py-2'>Color Palette</p>
+                        {/* Menampilkan semua warna latar belakang */}
+                        <div className="grid grid-cols-4 gap-2">
+                            {backgroundColors.map((color, index) => (
+                                <div
+                                    key={index}
+                                    className="w-8 h-8 rounded-full cursor-pointer"
+                                    style={{ backgroundColor: color }}
+                                ></div>
+                            ))}
+                        </div>
+                        <button onClick={toggleColorPalette}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
         </LayoutDetail>
      </div>
