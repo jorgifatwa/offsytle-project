@@ -13,7 +13,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 const menuItems = [
   { id: 1, label: "Create", icon: AddCircleOutlineOutlinedIcon, link: "/" },
   { id: 2, label: "Open File", icon: FileOpenOutlinedIcon, link: "/template" },
-  { id: 3, label: "Settings", icon: SettingsOutlinedIcon, link: "/users" },
+  { id: 3, label: "Settings", icon: SettingsOutlinedIcon, link: "/not_found" },
 ];
 
 const Sidebar = () => {

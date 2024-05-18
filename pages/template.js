@@ -18,7 +18,7 @@ export default function Home() {
         {
           title: "Back Size",
           image: '/assets/OFF-STYLE/3.png',
-          link: '/front_side'
+          link: '/back_side'
         },
       ];
   return (

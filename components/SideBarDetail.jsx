@@ -16,8 +16,8 @@ const menuItems = [
   { id: 1, label: "Main Menu", icon: HomeIcon, link: "/" },
   { id: 2, label: "Save", icon: SaveOutlinedIcon, link: "/template" },
   { id: 3, label: "Save as...", icon: SaveAsOutlinedIcon, link: "/front_side" },
-  { id: 4, label: "Delete", icon: DeleteOutlineOutlinedIcon, link: "/users" },
-  { id: 5, label: "Settings", icon: SettingsOutlinedIcon, link: "/users" },
+  { id: 4, label: "Delete", icon: DeleteOutlineOutlinedIcon, link: "/not_found" },
+  { id: 5, label: "Settings", icon: SettingsOutlinedIcon, link: "/back_side" },
 ];
 
 const Sidebar = () => {

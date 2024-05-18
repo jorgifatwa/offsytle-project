@@ -15,7 +15,7 @@ export default function Home() {
     const menuItem = [
         {
           title: "T-Shirt",
-          image: '/assets/OFF-STYLE/2.png',
+          image: '/assets/OFF-STYLE/3.png',
         },
       ];
     
@@ -24,7 +24,7 @@ export default function Home() {
      <div>
         <LayoutDetail>
         <div className="px-4">
-            <p className="font-bold text-4xl px-2 border-solid border-2 border-black"> Front Side </p>
+            <p className="font-bold text-4xl px-2 border-solid border-2 border-black">Back Side </p>
             <p className="font-bold text-base text-gray-500 px-2 py-4"> Tip: You can change the project title! </p>
             <div className="flex justify-between items-center mb-4">
                 {/* Menu bar dengan judul */}
